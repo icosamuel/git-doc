@@ -3,7 +3,7 @@
 Lors d'une opération git comme `push`, `pull` ou même `clone`, on recoit un message similaire à celui-ci:
 ![](img/access-denied.png)
 
-Souvent vous rencontrerez ce problème suite à la mise à jour de votre mot de passe windows
+Souvent on rencontre ce problème suite à la mise à jour du mot de passe windows
 
 ## Solutions
 
