@@ -20,4 +20,4 @@
     * Visitez le channel #git de rocketchat pour vérifier si vous êtes le seul à avoir ce problème. Si c'est le cas, mentionnez le problème à votre administrateur Gitlab ou un prog R&D
 
 * `git: 'gud' is not a git command. See 'git --help'.`
-    * Utiliser git par command-line est une capacité rare et recherchée. Elle vous offrira une capacité à régler vos problèmes rapide et polyvalente. De plus, toute l'aide en ligne offre des solutions dans ce format!
+    * Utiliser git par ligne de commande est une capacité rare et recherchée. Elle vous offrira une capacité à régler vos problèmes rapide et polyvalente. De plus, toute l'aide en ligne offre des solutions dans ce format!
