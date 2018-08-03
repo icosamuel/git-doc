@@ -13,7 +13,7 @@ Assurez vous d'avoir accès à https://git.sarbakan.com/ depuis une fenêtre inc
 
 ### 2: Mettre à jour votre mot de passe dans SourceTree
 
-Sourcetree se souviens de votre mot de passe afin de vous alléger la tache de l'entrer à chaque opération. Puisque Gitlab fonctionne avec votre authtification Windows, vous devez changer votre mot de pass enregistré dans SourceTree aussi. Pour ce faire, allez dans les options et jusqu'à cette fenêtre
+Sourcetree se souviens de votre mot de passe afin de vous alléger la tache de l'entrer à chaque opération. Puisque Gitlab fonctionne avec votre authentification Windows, vous devez changer votre mot de passe enregistré dans SourceTree aussi. Pour ce faire, allez dans les options et jusqu'à cette fenêtre
 ![](img/erase-authentification.png)
 
 ### 3: Configurer l'authentification par SSH
