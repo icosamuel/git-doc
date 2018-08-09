@@ -12,8 +12,8 @@
 + Vous devriez avoir reçu un courriel avec la commande à exécuter pour changer l'url du projet.
 + Il faut exécuter la commande à la racine du projet.
 + La commande ressemble à ce qui suit:  
-```
-git remote set-url origin ssh://git@git.sarbakan.com:10023/sarbakan/RnD/arcade-analytics/analytics-backend.git
+```bash
+git remote set-url origin ssh://git@git.sarbakan.com:10023/sarbakan/<groupes>/<projet>.git
 ```
 
 
