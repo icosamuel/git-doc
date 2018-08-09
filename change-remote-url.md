@@ -18,9 +18,9 @@ git remote set-url origin ssh://git@git.sarbakan.com:10023/sarbakan/RnD/arcade-a
 
 
 ## Avec SourceTree
-Comme la ligne de commande fait peur, voici comment le faire dans SourceTree:
-- 1: Accéder aux settings du projet  
+Comme la ligne de commande peut etre intimidante, voici comment le faire dans SourceTree:
+- 1: Accéder aux copnfigurations du projet  
 ![](img/settings.png)
 
-- 2: Modifier l'URL dans lk'onglet `remotes`  
+- 2: Modifier l'URL dans l'onglet `remotes`  
 ![](img/edit-remote-url.png)
