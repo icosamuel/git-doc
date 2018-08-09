@@ -65,7 +65,7 @@ Vous pouvez maintenant cloner les projets en utilisant SSH:
 
 ![2018-06-04_14_14_29-sarbakan___unity___UnityFramework___GitLab_-_Chromium](/uploads/9469e214d8c19c88105ed70723ca8d42/2018-06-04_14_14_29-sarbakan___unity___UnityFramework___GitLab_-_Chromium.png)
 
-Pour les projets déjà clonés, vous devrez changer l'URL pour celle avec SSH dans SourceTree. Pour ce faire, cliquez sur le bouton "settings" en haut à droite ![settingbutton](/uploads/88f89412565aa9d4dc3b964fe6533270/settingbutton.png)
+Pour les projets déjà clonés, vous devrez [changer l'URL](change-remote-url.md) pour celle avec SSH dans SourceTree. Pour ce faire, cliquez sur le bouton "settings" en haut à droite ![settingbutton](/uploads/88f89412565aa9d4dc3b964fe6533270/settingbutton.png)
 
 Sélectionner la ligne avec l'URL, cliquez sur "edit" et changez l'URL pour la version SSH: ![changerurl](/uploads/c7c3943a8ef767201a25cc61c2714742/changerurl.png)
 

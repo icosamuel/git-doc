@@ -12,6 +12,8 @@
 
 * [Récupérer une ancienne version d'un fichier](sourcetree-reset-to-commit)
 
+* [Changer l'addresse d'un projet git](change-remote-url)
+
 ## Support
 
 * [HTTP Basic: Access denied](http-access-denied)
