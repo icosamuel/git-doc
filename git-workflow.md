@@ -22,7 +22,10 @@ Dans SourceTree, le terme `Checkout` n'existe pas. Il suffit de double-cliquer s
 
 ```bash
 # en ligne de commande
-git checkout new-blue-character
+$ git checkout new-blue-character
+
+# on peut aussi 'checkouter' un tag ou un commit
+$ git checkout v1.0.5
 ```
 
 On peut aussi le repérer dans l'historique de `commits` avec le point, ou avec la commande `git status`
@@ -44,15 +47,35 @@ Your branch is up to date with 'origin/new-blue-character'.
 
 Il est possible que git vous empêche de `checkouter` si les changements nécessaires causeraient des conflits. à ce moment, on vous encourage à `commiter`, `discard` ou `stash` vos changements.
 
-## 2: Travaillez!
+## 2: Pull
 
-## 3: Commit
+![](img/operations/pull.jpg)
+
+```
+$ git pull
+```
+
+L'opération `pull` ramène les changements du `répertoire distant` sur votre `répertoire local` ainsi que dans votre `Workspace`. Afin de limiter les erreurs, il est **fortement conseillé** de ne pas avoir de changements locaux (non commités). Afin d'atteindre cet état, vous pouvez utiliser `commit`, `discard` ou `stash` pour vider votre `Staging area`.
+
+### Merge conflicts
+
+Il arrive souvent que l'on est plusieurs à travailler sur les mêmes fichiers et qu'on doit merger les conflits lorsqu'un `pull` les changements su `répertoire distant`. Git va tenter d'effectuer un merge si c'est possible automatiquement, mais parfois il a besoin d'une intervention humaine pour terminer un merge.
+
+Lire plus sur le [Merge](merge).
+
+## 3: Travaillez!
+
+Il n'y a pas de règle concernant la quantité approprié de travail à effectuer pour chaque commit. C'est à vous de trouver un équilibre entre le temps travaillé versus le temps passé à la gestion de vos changements. Typiquement, un programmeur fera un commit pour chaque tache JIRA ou pour un groupe de taches qui sont reliés. 
+
+À noter qu'il n'est pas obligatoire de pusher à chaque commit. Donc pour pouvez par exemple faire 5 commits et faire un push à la fin de l'avant-midi.
+
+## 4: Commit
 
 ![](img/operations/commit.jpg)
 
 Afin d'effectuer un `commit`, il faut d'abord ajouter nos changements à l'`index` (le `staging-area` dans SourceTree). Suite à cette étape, nous pourront faire notre `commit`
 
-### Staging
+### A: Staging
 
 L'étape d'ajouter nos changement à l'index est assez facile. Il suffit de les monter dans la section `Staged files`. 
 
@@ -62,14 +85,14 @@ Pour la ligne de commande, il y a plusieurs variations de `git add` qui vous aid
 
 ```bash
 # pour ajouter un ou plusieurs fichiers au staging
-git add path/to/my/file.txt
-git add tout-le-contenu/de-ce-dossier/*
+$ git add path/to/my/file.txt
+$ git add tout-le-contenu/de-ce-dossier/*
 
 # pour faire un "stage all"
-git add -A
+$ git add -A
 
 # pour retirer un fichier du staging
-git reset path/to/my/file.txt
+$ git reset path/to/my/file.txt
 ```
 vous pouvez en tout temps vérifier l'état de l'index avec `git status`
 
@@ -78,22 +101,18 @@ vous pouvez en tout temps vérifier l'état de l'index avec `git status`
 $ git status 
 On branch workflow
 Your branch is ahead of 'origin/workflow' by 1 commit.
-  (use "git push" to publish your local commits)
 
 Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
 
 	deleted:    asd.asd
 	added:      foo.bar
 
 Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
 
 	modified:   file.txt
 ```
 
-### Commit
+### B: Commit
 
 Cette étape est relativement facile. Entrez le message désiré et appuyez sur `Commit`
 
@@ -103,24 +122,49 @@ Cette étape est relativement facile. Entrez le message désiré et appuyez sur 
 git commit -m "votre message +review"
 ``` 
 
-## 4: Pull
+Suite à cette étape, vous retrouverez votre `commit` dans l'historique. Notez que la branche du répertoire local aura un commit de plus que la branche du répertoire distant. En ligne de commande, il existe plusieurs variétés de `git log` pour nous permettre de vérifier nos commit ou naviguer l'historique.
 
-SourceTree | Command-line
---- | --- | ---
-![](img/operations/pull.jpg) | `git pull` 
+![](img/workflow/commit-succesful.jpg)
 
-## 5: Merge conflicts
+```bash
+$ git log
+commit 938d57c39960f16bf6bddb2a6499abcebcde1e87 (HEAD -> workflow)
+Author: samuel begin <samuel.begin@sarbakan.com>
+Date:   Fri Aug 10 14:36:07 2018 -0400
 
-## 6: Push
+    votre message +review
+...
+```
 
-SourceTree | Command-line
---- | --- | ---
-![](img/operations/push.jpg) | `git push` 
+```bash
+$ git log --oneline --graph --all
+* 938d57c (HEAD -> workflow) votre message +review
+* b5bcde5 (origin/workflow) new images and some workflow done
+*   5ec96f9 Merge branch 'workflow' of git-doc.wiki into workflow
+|\  
+| * 00bddc0 asd
+* | a475538 new images
+|/  
+* 4da7cc2 (asd) screenshots from w7 vm
+...
+```
+
+## 5: Push
+
+![](img/operations/push.jpg)
+
+Si c'est la première fois que vous 'pushez' du travail sur une branche, il faudra cocher la case appropriée manuellement. Autrement, SourceTree séléctionnera automatiquement la branche sur laquelle vous avez `checkout`.
+
+![](img/workflow/push-window.jpg)
 
 ```bash
 # pour une nouvelle branch
-git push --set-upstream origin feature/new-blue-character
+$ git push --set-upstream origin new-blue-character
 
 # pour une branche qui existe déjà au serveur
-git push
+$ git push
 ```
+
+### Attention!
+
+À cette étape, il est possible que git vous empêche de `pusher`. La plupart du temps c'est parce qu'on doit faire un `pull` en premier afin de récupérer le travail de nos collègues avant d'être en mesure de pusher. Voyez la section à propos de l'opération `pull` plus haut.
