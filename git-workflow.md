@@ -12,11 +12,7 @@ Les instructions et recommandations dans cet article assument que vous avez lu l
 
 ![](img/workflow/commands-workflow-reworked.png)
 
-Dans cet article seront présenté en ordre d'utilisation les différentes opérations git 
-
-# Routine-de-Travail
-
-
+Dans cet article seront présenté en ordre d'utilisation (chronologique) les différentes opérations git. Vous pouvez utiliser le schéma précédent afin de faire des références visuelles avec les autres opérations.
 
 ## 1: CHECKOUT
 
