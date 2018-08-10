@@ -2,7 +2,7 @@
 
 ### Sommaire
 
-Ce document vous présente les différents environments dans lesquels peuvent vivre des changements git. Toutes forme de modification, ajout ou suppression est enregistrée dans git comme un changement. Nous verront dans cet article quels sont les divers environments et comment ils interagissent entre eux.
+Ce document vous présente les différents environnements dans lesquels peuvent vivre des changements git. Toutes forme de modification, ajout ou suppression est enregistrée dans git comme un changement. Nous verrons dans cet article quels sont les divers environnements et comment ils interagissent entre eux.
 
 ### Préalables
 
@@ -20,9 +20,9 @@ C'est ici que votre travail est fait. Dans cet environnement, vous éditez les f
 
 ![](img/workflow/windows-explorer.jpg)
 
-Pensez du Workspace comme votre copie de travail que vous pouvez modifier dirrectement. C'est aussi celle qui sera modifiée lorsqu'on `pull` ou on `checkout`. Le workspace est central à notre workflow de travail, puisqu'il est l'endroit ou toutes vos modification vont avoir lieu. 
+Pensez du Workspace comme votre copie de travail que vous pouvez modifier directement. C'est aussi celle qui sera modifiée lorsqu'on `pull` ou on `checkout`. Le workspace est central à notre workflow de travail, puisqu'il est l'endroit ou toutes vos modification vont avoir lieu. 
 
-On peut le repérer dans SourceTree à l'aide de l'écran de `File Status` ou encore dans l'historique comme une ligne qui est toujours au dèssus de la liste au nom de `uncomitted changes`
+On peut le repérer dans SourceTree à l'aide de l'écran de `File Status` ou encore dans l'historique comme une ligne qui est toujours au dessus de la liste au nom de `uncomitted changes`
 
 ![](img/workflow/uncommited-changes.jpg)
 
@@ -82,7 +82,7 @@ $ git branch --all
 
 ![](img/workflow/commit-history.jpg)
 
-Pour qu'on puiss travailler avec le répertoire distant ([Gitlab](https://git.sarbakan.com)), il faut fournir à notre répertoire local un URL. Cet url est celui que l'on va chercher sur Gitlab et qui sert à faire le `clone`. On doit parfois changer cette addresse comme expliqué dans [cet article](change-remote-url). Cet url ressemble à quelquechose comme ce qui suit:
+Pour qu'on puiss travailler avec le répertoire distant ([Gitlab](https://git.sarbakan.com)), il faut fournir à notre répertoire local un URL. Cet url est celui que l'on va chercher sur Gitlab et qui sert à faire le `clone`. On doit parfois changer cette adresse comme expliqué dans [cet article](change-remote-url). Cet url ressemble à quelque chose comme ce qui suit:
 
 ```bash
 # protocole HTTPS
@@ -98,13 +98,13 @@ ssh://git@git.sarbakan.com:10023/sarbakan/unity/unity-projects/01733_Playmobil_C
 
 Le Stash est un outil de travail vraiment intéressant. Mais il n'est absolument pas nécessaire afin de travailler. 
 
-Un stash est un groupe de changements (`change-set`) qui est entreposé à l'extérieur du [Workspace](#workspace) et de l'[Index](#index). Il est très utile lorsqu'on doit effectuer un `merge` ou encore lorsqu'on souhaite `commiter` nos changements sur une autre branche. Il s'agit donc d'un espace de mémoire pour y stocker des changements afin de nous permettre d'effectuer des opérationt qui nécessitent un index vide. Il est comparable à un `commit` qui n'est sur aucune branche et que l'on peut développé lorsqu'on le souhaite sur nimporte quelle branche.
+Un stash est un groupe de changements (`change-set`) qui est entreposé à l'extérieur du [Workspace](#workspace) et de l'[Index](#index). Il est très utile lorsqu'on doit effectuer un `merge` ou encore lorsqu'on souhaite `commiter` nos changements sur une autre branche. Il s'agit donc d'un espace de mémoire pour y stocker des changements afin de nous permettre d'effectuer des opérations qui nécessitent un index vide. Il est comparable à un `commit` qui n'est sur aucune branche et que l'on peut développé lorsqu'on le souhaite sur n'importe quelle branche.
 
 Nous verrons des cas d'utilisations dans la prochaine partie.
 
-# Intéractions entre les environments
+# Interactions entre les environnements
 
-Maintenant que vous avez une bonne compréhension des divers environments par lesquels nos changements peuvent passer, vous comprendrez beaucoup mieux le schéma suivant qui représente les interactions entre les environments dans git.
+Maintenant que vous avez une bonne compréhension des divers environnements par lesquels nos changements peuvent passer, vous comprendrez beaucoup mieux le schéma suivant qui représente les interactions entre les environnements dans git.
 
 ![](img/workflow/commands-workflow-reworked.png)
 
