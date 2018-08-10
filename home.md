@@ -8,11 +8,9 @@
     * [Détails sur les environments et leurs intéractions](git-environments)
     * [Workflow d'utilisation des opérations git](git-workflow)
 
-## Configuration
+## Comment Faire?
 
 * [Configurer SourceTree pour utiliser une clée SSH](Configuration-SourceTree-avec-clée-SSH)
-
-## Comment Faire?
 
 * [Afficher le log d'un fichier dans Sourcetree](sourcetree-log-file)
 
