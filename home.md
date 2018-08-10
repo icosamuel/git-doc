@@ -1,8 +1,14 @@
 # Tutoriels et rubriques d'aide pour Git, Gitlab et Sourcetree
 
-## Configuration
+## Documentation
 
 * [Utilisation de base de SourceTree et Gitlab](pdf/sarbakan_sourcetree.pdf)
+
+* #### Lecture pour utilisateur intermédiaire
+    * [Détails sur les environments et leurs intéractions](git-environments)
+    * [Workflow d'utilisation des opérations git](git-workflow)
+
+## Configuration
 
 * [Configurer SourceTree pour utiliser une clée SSH](Configuration-SourceTree-avec-clée-SSH)
 
