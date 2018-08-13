@@ -40,6 +40,13 @@ $ git status
 On branch new-blue-character
 Your branch is up to date with 'origin/new-blue-character'.
 ...</pre>
+
+```bash
+$ git status
+On branch new-blue-character
+Your branch is up to date with 'origin/new-blue-character'.
+...
+```
 </td>
 </tr></table>
 
