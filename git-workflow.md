@@ -23,32 +23,29 @@ Dans SourceTree, le terme `Checkout` n'existe pas. Il suffit de double-cliquer s
 	<img src="img/workflow/checkout.jpg"/>
 </td>
 <td style="height:100%;">
-<pre class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code># en ligne de commande
+<pre class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code># En ligne de commande
 $ git checkout new-blue-character
 
-\# on peut aussi 'checkouter' un tag ou un commit
-$ git checkout v1.0.5
-...</code></pre>
+# On peut aussi 'checkouter' un tag ou un commit
+$ git checkout v1.0.5</code></pre>
 </td>
 </tr></table>
 
 On peut aussi le repérer dans l'historique de `commits` avec le point, ou avec la commande `git status`
 
-<div>
-<div style="float:left; margin-right: 20px;">
+<table><tr>
+<td>
 	<img src="img/workflow/checkout-history.jpg"/>
-</div>
-<div style="width:auto;" >
-	<pre style="height:100%;" class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git status
+</td>
+<td style="height:100%;">
+<pre class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git status
 On branch new-blue-character
 Your branch is up to date with 'origin/new-blue-character'.
 ...</code></pre>
-</div>
-</div>
-
+</td>
+</tr></table>
 
 À partir de ce moment, votre `Workspace` sera à la version choisie (dans ce cas, le dernier `commit` sur `new-blue-character`). Cette opération vous permet de changer de version de logiciel rapidement.
-
 
 ### Attention!
 
