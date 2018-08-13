@@ -158,8 +158,6 @@ On retrouve les stash sur la barre de gauche d'où on peut le déballer *(ou l'a
 </td>
 </tr></table>
 
-### Attention!
-
 Appliquer un stash peut nécéssiter un merge si les changements `stashés` entrent en conflit avec le nouvel état de votre workspace. Il est utilisé souvent lorsque vous devez effectuer un `pull` mais que vous ne voulez pas commiter vos changements.
 
 # Interactions entre les environnements
