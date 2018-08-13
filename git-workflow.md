@@ -30,17 +30,17 @@ $ git checkout v1.0.5
 
 On peut aussi le repérer dans l'historique de `commits` avec le point, ou avec la commande `git status`
 
-<table><tr>
-<td>
+<div>
+<div style="float:left; margin-right: 20px;">
 	<img src="img/workflow/checkout-history.jpg"/>
-</td>
-<td>
-<pre style="height:100%;" class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git status
+</div>
+<div style="width:auto;" >
+	<pre style="height:100%;" class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git status
 On branch new-blue-character
 Your branch is up to date with 'origin/new-blue-character'.
 ...</code></pre>
-</td>
-</tr></table>
+</div>
+</div>
 
 
 À partir de ce moment, votre `Workspace` sera à la version choisie (dans ce cas, le dernier `commit` sur `new-blue-character`). Cette opération vous permet de changer de version de logiciel rapidement.
