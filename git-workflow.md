@@ -79,20 +79,28 @@ Il n'y a pas de règle concernant la quantité approprié de travail à effectue
 
 ## 4: Commit
 
-![](img/operations/commit.jpg)
+<table><tr>
+<td>
+	<img src="img/operations/commit.jpg"/>
+</td>
+<td>
+<pre style="height:100%;" class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git commit -m "votre message +review"</code>
+</pre>
+</td>
+</tr></table>
 
 Afin d'effectuer un `commit`, il faut d'abord ajouter nos changements à l'`index` (le `staging-area` dans SourceTree). Suite à cette étape, nous pourront faire notre `commit`
 
 ### A: Staging
 
-L'étape d'ajouter nos changement à l'index est assez facile. Il suffit de les monter dans la section `Staged files`. 
+L'étape d'ajouter nos changement à l'index est assez facile. Il suffit de les monter dans la section `Staged files`. Pour la ligne de commande, il y a plusieurs variations de `git add` qui vous aideront à faire cette étape.
 
-![](img/workflow/staging-area.jpg)
-
-Pour la ligne de commande, il y a plusieurs variations de `git add` qui vous aideront à faire cette étape.
-
-```bash
-# pour ajouter un ou plusieurs fichiers au staging
+<table><tr>
+<td>
+	<img src="img/workflow/staging-area.jpg"/>
+</td>
+<td style="height:100%;">
+<pre class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code># pour ajouter un ou plusieurs fichiers au staging
 $ git add path/to/my/file.txt
 $ git add tout-le-contenu/de-ce-dossier/*
 
@@ -100,8 +108,10 @@ $ git add tout-le-contenu/de-ce-dossier/*
 $ git add -A
 
 # pour retirer un fichier du staging
-$ git reset path/to/my/file.txt
-```
+$ git reset path/to/my/file.txt</code></pre>
+</td>
+</tr></table>
+
 vous pouvez en tout temps vérifier l'état de l'index avec `git status`
 
 ### B: Commit

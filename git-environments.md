@@ -14,9 +14,15 @@ Les instructions et recommandations dans cet article assument que vous avez un p
 
 ## Workspace
 
-![](img/workflow/icons-workspace.jpg) 
+<table><tr>
+<td width="120px">
+	<img src="img/workflow/icons-workspace.jpg"/>
+</td>
+<td>
+C'est ici que votre travail est fait. Dans cet environnement, vous éditez les fichiers du projet avec votre éditeur préféré, avec VSCode, Unity, Maya ou Cubase. Il s'agit de <b>votre copie de travail</b> et c'est aussi ce que vous pouvez naviguer avec l'explorateur de fichiers windows: 
+</td>
+</tr></table>
 
-C'est ici que votre travail est fait. Dans cet environnement, vous éditez les fichiers du projet avec votre éditeur préféré, avec VSCode, Unity, Maya ou Cubase. Il s'agit de **votre copie de travail** et c'est aussi ce que vous pouvez naviguer avec l'explorateur de fichiers windows: 
 
 ![](img/workflow/windows-explorer.jpg)
 
@@ -30,57 +36,83 @@ On peut le repérer dans SourceTree à l'aide de l'écran de `File Status` ou en
 
 ## Index
 
-![](img/workflow/icons-index.jpg) 
+<table><tr>
+<td width="120px">
+	<img src="img/workflow/icons-index.jpg"/>
+</td>
+<td>
+L'index représente le <b>Staging Area</b> (Dans SourceTree). Tout ce qui se trouve dans la section <code>Staged Files</code> est considéré dans l'index. C'est une étape nécessaire lorsqu'on veut commiter nos changements.
+</td>
+</tr></table>
 
-L'index représente le **Staging Area** (Dans SourceTree). Tout ce qui se trouve dans la section `Staged Files` est considéré dans l'index. C'est une étape nécessaire lorsqu'on veut commiter nos changements.
-
-![](img/workflow/staging-area.jpg)
 
 De cet endroit, on peut faire un `commit` pour enregistrer nos changement au [Local Repository](#local-repository) ou les retirer du staging area pour les enlever de l'index. L'index fait partie du [Workspace](#workspace). C'est-à dire, tous les fichiers qui sont dans l'index sont considérés aussi dans le [Workspace](#workspace).
 
-On peut facilement savoir ce qui est dans l'index avec la ligne de commande `git status` en voici un exemple ou on a deux fichiers modifiés dans l'index (`Changes to be committed`).
+On peut facilement savoir ce qui est dans l'index avec la ligne de commande `git status` en voici un exemple ou on a différents changements dans l'index (`Changes to be committed`).
 
-```bash
-$ git status 
-On branch workflow
-Your branch is up to date with 'origin/workflow'.
+<table><tr>
+<td>
+	<img src="img/workflow/staging-area.jpg"/>
+</td>
+<td style="height:100%;">
+<pre class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git status 
 
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-	modified:   img/workflow/commands-workflow.png
-	modified:   workflow.md
-```
+Changes to be committed:  
+modified:   Allo.txt
+added:      BenIsAbsolutelyNotLame.txt
+removed:    aaaaa.txt
+</code></pre>
+</td>
+</tr></table>
 
 ## Local-Repository
 
-![](img/workflow/icons-local-repo.jpg) 
+<table><tr>
+<td width="120px">
+	<img src="img/workflow/icons-local-repo.jpg"/>
+</td>
+<td>
+Le répertoire local représentes <b>votre historique de commits</b> ainsi que toutes les branches que vous avez déjà <code>checkout</code>.
+</td>
+</tr></table>
 
-Le répertoire local représentes **votre historique de commits** ainsi que toutes les branches que vous avez déjà `checkout`.
-
-Les branches qui font partie de votre répertoire local sont facile à identifier dans la liste de gauche (SourceTree). Elles font partie de la liste de `Branches`. Quant aux branches du serveur, elles se trouvent dans la liste `Remotes`.
-
-![](img/workflow/checkout.jpg)
+<table><tr>
+<td width="120px">
+	<img src="img/workflow/checkout.jpg"/>
+</td>
+<td>
+Les branches qui font partie de votre répertoire local sont facile à identifier dans la liste de gauche (SourceTree). Elles font partie de la liste de <code>Branches</code>. Quant aux branches du serveur, elles se trouvent dans la liste <code>Remotes</code>.
+</td>
+</tr></table>
 
 Les opérations `clone`, `push`, `pull` et `fetch` sont essentiellement là pour synchroniser le répertoire local du [répertoire serveur](#remote-repository). Et c'est cette étape qui vous permet de partager votre travail avec vos collègues ainsi que récupérer le leur.
 
 ## Remote-Repository
 
-![](img/workflow/icons-remote-repo.jpg) 
-
-Le répertoire distant existe sur notre serveur [Gitlab](https://git.sarbakan.com). Le répertoire distant est le seul endroit que toute l'équipe peut accéder. C'est grâce à lui si on peut partager notre travail avec notre équipe.
+<table><tr>
+<td width="120px">
+	<img src="img/workflow/icons-remote-repo.jpg"/>
+</td>
+<td>
+Le répertoire distant existe sur notre serveur <a href="https://git.sarbakan.com">Gitlab</a>. Le répertoire distant est le seul endroit que toute l'équipe peut accéder. C'est grâce à lui si on peut partager notre travail avec notre équipe.
+</td>
+</tr></table>
 
 On peut repérer les branches distantes à l'aide du mot clef `origin` (qui est le nom du remote par défaut). Donc par exemple, la branche `origin/FrankenBranch` peut être repérée dans l'historique de commits par son icone portant son nom. On peut aussi les repérer avec la ligne de commande `git branch --all`
 
-```
-$ git branch --all
+<table><tr>
+<td>
+	<img src="img/workflow/commit-history.jpg"/>
+</td>
+<td style="height:100%;">
+<pre class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git branch --all
   master
 * FrankenBranch
   remotes/origin/master
   remotes/origin/FrankenBranch
-```
-
-![](img/workflow/commit-history.jpg)
+</code></pre>
+</td>
+</tr></table>
 
 Pour qu'on puisse travailler avec le répertoire distant ([Gitlab](https://git.sarbakan.com)), il faut fournir à notre répertoire local un URL. Cet URL est celui que l'on va chercher sur Gitlab et qui sert à faire le `clone`. On doit parfois changer cette adresse comme expliqué dans [cet article](change-remote-url). Cet URL ressemble à quelque chose comme ce qui suit:
 
@@ -94,13 +126,16 @@ ssh://git@git.sarbakan.com:10023/sarbakan/unity/unity-projects/01733_Playmobil_C
 
 ## Stash
 
-![](img/workflow/icons-stash.jpg) 
-
+<table><tr>
+<td width="120px">
+	<img src="img/workflow/icons-stash.jpg"/>
+</td>
+<td>
 Le Stash est un outil de travail vraiment intéressant. Mais il n'est absolument pas nécessaire afin de travailler. 
+</td>
+</tr></table>
 
 Un stash est un groupe de changements (`change-set`) qui est entreposé à l'extérieur du [Workspace](#workspace) et de l'[Index](#index). Il est très utile lorsqu'on doit effectuer un `merge` ou encore lorsqu'on souhaite `commiter` nos changements sur une autre branche. Il s'agit donc d'un espace de mémoire pour y stocker des changements afin de nous permettre d'effectuer des opérations qui nécessitent un index vide. Il est comparable à un `commit` qui n'est sur aucune branche et que l'on peut développer lorsqu'on le souhaite sur n'importe quelle branche.
-
-Nous verrons des cas d'utilisations dans la prochaine partie.
 
 # Interactions entre les environnements
 
