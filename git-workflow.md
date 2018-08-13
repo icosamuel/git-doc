@@ -22,19 +22,13 @@ Dans SourceTree, le terme `Checkout` n'existe pas. Il suffit de double-cliquer s
 <td>
 	<img src="img/workflow/checkout.jpg"/>
 </td>
-<td>
-<span>
-
-```
-# en ligne de commande
+<td style="height:100%;">
+<pre class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code># en ligne de commande
 $ git checkout new-blue-character
 
 \# on peut aussi 'checkouter' un tag ou un commit
 $ git checkout v1.0.5
-...
-```
-
-</span>
+...</code></pre>
 </td>
 </tr></table>
 
