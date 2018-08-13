@@ -35,8 +35,7 @@ On peut aussi le repérer dans l'historique de `commits` avec le point, ou avec 
 	<img src="img/workflow/checkout-history.jpg"/>
 </td>
 <td>
-<pre style="height:100%;" class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>
-$ git status
+<pre style="height:100%;" class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git status
 On branch new-blue-character
 Your branch is up to date with 'origin/new-blue-character'.
 ...</code></pre>
