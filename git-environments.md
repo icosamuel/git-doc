@@ -2,7 +2,7 @@
 
 ### Sommaire
 
-Ce document vous présente les différents environnements dans lesquels peuvent vivre des changements git. Toutes forme de modification, ajout ou suppression est enregistrée dans git comme un changement. Nous verrons dans cet article quels sont les divers environnements et comment ils interagissent entre eux.
+Ce document vous présente les différents environnements dans lesquels peuvent vivre des changements git. Toutes forme de modification, ajout ou suppression est enregistré dans git comme un changement. Nous verrons dans cet article quels sont les divers environnements et comment ils interagissent entre eux.
 
 ### Préalables
 
@@ -38,7 +38,7 @@ L'index représente le **Staging Area** (Dans SourceTree). Tout ce qui se trouve
 
 De cet endroit, on peut faire un `commit` pour enregistrer nos changement au [Local Repository](#local-repository) ou les retirer du staging area pour les enlever de l'index. L'index fait partie du [Workspace](#workspace). C'est-à dire, tous les fichiers qui sont dans l'index sont considérés aussi dans le [Workspace](#workspace).
 
-On peut facilement savoir ce qui est dans l'index avec la ligne de commande `git statut` en voici un exemple ou on a deux fichiers modifiés dans l'index (`Changes to be committed`).
+On peut facilement savoir ce qui est dans l'index avec la ligne de commande `git status` en voici un exemple ou on a deux fichiers modifiés dans l'index (`Changes to be committed`).
 
 ```bash
 $ git status 
@@ -68,7 +68,7 @@ Les opérations `clone`, `push`, `pull` et `fetch` sont essentiellement là pour
 
 ![](img/workflow/icons-remote-repo.jpg) 
 
-Le Répertoire distant existe sur notre serveur [Gitlab](https://git.sarbakan.com). Le répertoire Distant est le seul endroit que toute l'équipe peut accéder. C'est grâce à lui si on peut partager notre travail avec notre équipe.
+Le répertoire distant existe sur notre serveur [Gitlab](https://git.sarbakan.com). Le répertoire distant est le seul endroit que toute l'équipe peut accéder. C'est grâce à lui si on peut partager notre travail avec notre équipe.
 
 On peut repérer les branches distantes à l'aide du mot clef `origin` (qui est le nom du remote par défaut). Donc par exemple, la branche `origin/FrankenBranch` peut être repérée dans l'historique de commits par son icone portant son nom. On peut aussi les repérer avec la ligne de commande `git branch --all`
 
@@ -82,7 +82,7 @@ $ git branch --all
 
 ![](img/workflow/commit-history.jpg)
 
-Pour qu'on puiss travailler avec le répertoire distant ([Gitlab](https://git.sarbakan.com)), il faut fournir à notre répertoire local un URL. Cet url est celui que l'on va chercher sur Gitlab et qui sert à faire le `clone`. On doit parfois changer cette adresse comme expliqué dans [cet article](change-remote-url). Cet url ressemble à quelque chose comme ce qui suit:
+Pour qu'on puisse travailler avec le répertoire distant ([Gitlab](https://git.sarbakan.com)), il faut fournir à notre répertoire local un URL. Cet URL est celui que l'on va chercher sur Gitlab et qui sert à faire le `clone`. On doit parfois changer cette adresse comme expliqué dans [cet article](change-remote-url). Cet URL ressemble à quelque chose comme ce qui suit:
 
 ```bash
 # protocole HTTPS
@@ -98,7 +98,7 @@ ssh://git@git.sarbakan.com:10023/sarbakan/unity/unity-projects/01733_Playmobil_C
 
 Le Stash est un outil de travail vraiment intéressant. Mais il n'est absolument pas nécessaire afin de travailler. 
 
-Un stash est un groupe de changements (`change-set`) qui est entreposé à l'extérieur du [Workspace](#workspace) et de l'[Index](#index). Il est très utile lorsqu'on doit effectuer un `merge` ou encore lorsqu'on souhaite `commiter` nos changements sur une autre branche. Il s'agit donc d'un espace de mémoire pour y stocker des changements afin de nous permettre d'effectuer des opérations qui nécessitent un index vide. Il est comparable à un `commit` qui n'est sur aucune branche et que l'on peut développé lorsqu'on le souhaite sur n'importe quelle branche.
+Un stash est un groupe de changements (`change-set`) qui est entreposé à l'extérieur du [Workspace](#workspace) et de l'[Index](#index). Il est très utile lorsqu'on doit effectuer un `merge` ou encore lorsqu'on souhaite `commiter` nos changements sur une autre branche. Il s'agit donc d'un espace de mémoire pour y stocker des changements afin de nous permettre d'effectuer des opérations qui nécessitent un index vide. Il est comparable à un `commit` qui n'est sur aucune branche et que l'on peut développer lorsqu'on le souhaite sur n'importe quelle branche.
 
 Nous verrons des cas d'utilisations dans la prochaine partie.
 
