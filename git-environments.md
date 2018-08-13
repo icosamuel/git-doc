@@ -134,7 +134,9 @@ ssh://git@git.sarbakan.com:10023/sarbakan/unity/unity-projects/01733_Playmobil_C
 </td>
 </tr></table>
 
-Un stash est un groupe de changements (`change-set`) qui est entreposé à l'extérieur du [Workspace](#workspace) et de l'[Index](#index). Il est très utile lorsqu'on doit effectuer un `merge` ou encore lorsqu'on souhaite `commiter` nos changements sur une autre branche. Il s'agit donc d'un espace de mémoire pour y stocker des changements afin de nous permettre d'effectuer des opérations qui nécessitent un index vide. Il est comparable à un `commit` qui n'est sur aucune branche et que l'on peut déballer lorsqu'on le souhaite sur n'importe quelle branche.
+Un stash est un groupe de changements (`change-set`) qui est entreposé à l'extérieur du [Workspace](#workspace) et de l'[Index](#index). Il est très utile lorsqu'on doit effectuer `pull`, un `merge` ou encore lorsqu'on souhaite `commiter` nos changements sur une autre branche. 
+
+Il s'agit donc d'un espace de mémoire pour y stocker des changements afin de nous permettre d'effectuer des opérations qui nécessitent un index vide. Il est comparable à un `commit` qui n'est sur aucune branche et que l'on peut déballer lorsqu'on le souhaite sur n'importe quelle branche.
 
 <table><tr>
 <td>
@@ -146,7 +148,7 @@ Un stash est un groupe de changements (`change-set`) qui est entreposé à l'ext
 </td>
 </tr></table>
 
-On retrouve les stash sur la barre de gauche d'où on peut le déballer *(ou l'appliquer)* sur notre `workspace`. On peut aussi le déballer à l'aide de la ligne de commande `git stash apply`
+On retrouve les stash sur la barre de gauche d'où on peut le déballer *(ou l'appliquer)* sur notre `workspace`. On peut aussi le déballer à l'aide de la ligne de commande `git stash apply`. Appliquer un stash peut nécéssiter un merge si les changements `stashés` entrent en conflit avec le nouvel état de votre workspace. 
 
 <table><tr>
 <td>
@@ -157,8 +159,6 @@ On retrouve les stash sur la barre de gauche d'où on peut le déballer *(ou l'a
 </pre>
 </td>
 </tr></table>
-
-Appliquer un stash peut nécéssiter un merge si les changements `stashés` entrent en conflit avec le nouvel état de votre workspace. Il est utilisé souvent lorsque vous devez effectuer un `pull` mais que vous ne voulez pas commiter vos changements.
 
 # Interactions entre les environnements
 
