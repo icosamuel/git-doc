@@ -53,11 +53,15 @@ Il est possible que git vous empêche de `checkouter` si les changements nécess
 
 ## 2: Pull
 
-![](img/operations/pull.jpg)
-
-```
-$ git pull
-```
+<table><tr>
+<td>
+	<img src="img/operations/pull.jpg"/>
+</td>
+<td>
+<pre style="height:100%;" class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git pull</code>
+</pre>
+</td>
+</tr></table>
 
 L'opération `pull` ramène les changements du `répertoire distant` sur votre `répertoire local` ainsi que dans votre `Workspace`. Afin de limiter les erreurs, il est **fortement conseillé** de ne pas avoir de changements locaux (non commités). Afin d'atteindre cet état, vous pouvez utiliser `commit`, `discard` ou `stash` pour vider votre `Staging area`.
 
@@ -100,22 +104,6 @@ $ git reset path/to/my/file.txt
 ```
 vous pouvez en tout temps vérifier l'état de l'index avec `git status`
 
-```bash
-# pour vérifier l'état de l'index
-$ git status 
-On branch workflow
-Your branch is ahead of 'origin/workflow' by 1 commit.
-
-Changes to be committed:
-
-	deleted:    asd.asd
-	added:      foo.bar
-
-Changes not staged for commit:
-
-	modified:   file.txt
-```
-
 ### B: Commit
 
 Cette étape est relativement facile. Entrez le message désiré et appuyez sur `Commit`
@@ -140,22 +128,17 @@ Date:   Fri Aug 10 14:36:07 2018 -0400
 ...
 ```
 
-```bash
-$ git log --oneline --graph --all
-* 938d57c (HEAD -> workflow) votre message +review
-* b5bcde5 (origin/workflow) new images and some workflow done
-*   5ec96f9 Merge branch 'workflow' of git-doc.wiki into workflow
-|\  
-| * 00bddc0 asd
-* | a475538 new images
-|/  
-* 4da7cc2 (asd) screenshots from w7 vm
-...
-```
-
 ## 5: Push
 
-![](img/operations/push.jpg)
+<table><tr>
+<td>
+	<img src="img/operations/push.jpg"/>
+</td>
+<td>
+<pre style="height:100%;" class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git push</code>
+</pre>
+</td>
+</tr></table>
 
 Si c'est la première fois que vous 'pushez' du travail sur une branche, il faudra cocher la case appropriée manuellement. Autrement, SourceTree séléctionnera automatiquement la branche sur laquelle vous avez `checkout`.
 
@@ -164,9 +147,6 @@ Si c'est la première fois que vous 'pushez' du travail sur une branche, il faud
 ```bash
 # pour une nouvelle branch
 $ git push --set-upstream origin new-blue-character
-
-# pour une branche qui existe déjà au serveur
-$ git push
 ```
 
 ### Attention!
