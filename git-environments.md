@@ -130,12 +130,37 @@ ssh://git@git.sarbakan.com:10023/sarbakan/unity/unity-projects/01733_Playmobil_C
 <td width="120px">
 	<img src="img/workflow/icons-stash.jpg"/>
 </td>
-<td>
-Le Stash est un outil de travail vraiment intéressant. Mais il n'est absolument pas nécessaire afin de travailler. 
+<td>Le Stash vous permet de mettre temporairement de côté vos changements au <code>workspace</code>. Le Stash est un outil de travail vraiment intéressant. Mais il n'est absolument pas nécessaire afin de travailler.
 </td>
 </tr></table>
 
-Un stash est un groupe de changements (`change-set`) qui est entreposé à l'extérieur du [Workspace](#workspace) et de l'[Index](#index). Il est très utile lorsqu'on doit effectuer un `merge` ou encore lorsqu'on souhaite `commiter` nos changements sur une autre branche. Il s'agit donc d'un espace de mémoire pour y stocker des changements afin de nous permettre d'effectuer des opérations qui nécessitent un index vide. Il est comparable à un `commit` qui n'est sur aucune branche et que l'on peut développer lorsqu'on le souhaite sur n'importe quelle branche.
+Un stash est un groupe de changements (`change-set`) qui est entreposé à l'extérieur du [Workspace](#workspace) et de l'[Index](#index). Il est très utile lorsqu'on doit effectuer un `merge` ou encore lorsqu'on souhaite `commiter` nos changements sur une autre branche. Il s'agit donc d'un espace de mémoire pour y stocker des changements afin de nous permettre d'effectuer des opérations qui nécessitent un index vide. Il est comparable à un `commit` qui n'est sur aucune branche et que l'on peut déballer lorsqu'on le souhaite sur n'importe quelle branche.
+
+<table><tr>
+<td>
+	<img src="img/operations/stash.jpg"/>
+</td>
+<td>
+<pre style="height:100%;" class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git stash push -m "un nom de stash"</code>
+</pre>
+</td>
+</tr></table>
+
+On retrouve les stash sur la barre de gauche d'où on peut le déballer *(ou l'appliquer)* sur notre `workspace`. On peut aussi le déballer à l'aide de la ligne de commande `git stash apply`
+
+<table><tr>
+<td>
+	<img src="img/workflow/stash-list.jpg"/>
+</td>
+<td>
+<pre style="height:100%;" class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git stash apply </code>
+</pre>
+</td>
+</tr></table>
+
+### Attention!
+
+Appliquer un stash peut nécéssiter un merge si les changements `stashés` entrent en conflit avec le nouvel état de votre workspace. Il est utilisé souvent lorsque vous devez effectuer un `pull` mais que vous ne voulez pas commiter vos changements.
 
 # Interactions entre les environnements
 
@@ -143,4 +168,4 @@ Maintenant que vous avez une bonne compréhension des divers environnements par 
 
 ![](img/workflow/commands-workflow-reworked.png)
 
-Pour plus de détails sur les opérations (interactions entre les environments) continuez votre lecture sur le [workflow d'opérations git](git-workflow) ou un article en anglais plus technique [ici](https://blog.osteele.com/2008/05/my-git-workflow/)
+## Pour plus de détails sur les opérations, continuez votre lecture sur le [workflow d'opérations git](git-workflow)
