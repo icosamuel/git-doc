@@ -18,15 +18,25 @@ Dans cet article seront présenté en ordre d'utilisation (chronologique) les di
 
 Dans SourceTree, le terme `Checkout` n'existe pas. Il suffit de double-cliquer sur une branche ou un commit afin de le `checkout`. Dans l'exemple suivant, la branche `new-blue-character` a été 'checked out'. On peut s'en assurer avec le petit point à gauche ainsi que le nom de branche qui est en gras. 
 
-![](img/workflow/checkout.jpg)
+<table><tr>
+<td>
+	<img src="img/workflow/checkout.jpg"/>
+</td>
+<td>
+<span>
 
-```bash
+```
 # en ligne de commande
 $ git checkout new-blue-character
 
-# on peut aussi 'checkouter' un tag ou un commit
+\# on peut aussi 'checkouter' un tag ou un commit
 $ git checkout v1.0.5
+...
 ```
+
+</span>
+</td>
+</tr></table>
 
 On peut aussi le repérer dans l'historique de `commits` avec le point, ou avec la commande `git status`
 
