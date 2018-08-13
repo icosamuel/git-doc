@@ -77,7 +77,7 @@ Le répertoire local représentes <b>votre historique de commits</b> ainsi que t
 </tr></table>
 
 <table><tr>
-<td width="120px">
+<td width="210px">
 	<img src="img/workflow/checkout.jpg"/>
 </td>
 <td>
