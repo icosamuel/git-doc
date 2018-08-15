@@ -86,3 +86,16 @@ Il est possible que SourceTree vous donne des avertissements lors des premières
 
 #### Le bouton "cloner" reste désactivé (gris)
 Essayez de redémarrer SourceTree, si le problème persiste, [contactez-nous](https://chat.sarbakan.com/channel/R%2526D-connect)!
+
+#### Problèmes d'authentification avec les sous-modules et/ou la ligne de commande
+Ce problème devrait être réglé automatiquement dans le futur (une demande TI a été créé). Pour le régler manuellement, il faut ajouter une variable d'environnement nommée `GIT_SSH` et qui a comme valeur l'emplacement du fichier "plink.exe" de SourceTree, qui est normalement `C:\Program Files (x86)\Atlassian\Sourcetree\tools\putty\plink.exe`
+
+Pour ce faire, ouvrez une invite de commande en tant qu'administrateur:
+![cmdAdmin](/uploads/596d5c00fec3f0c43d284c54eee5f6cb/cmdAdmin.png)
+
+Entrez la commande suivante (assurez vous que c'est le bon chemin vers `plink.exe`):
+```
+setx GIT_SSH "C:\Program Files (x86)\Atlassian\Sourcetree\tools\putty\plink.exe" /M
+```
+
+Vous devrez ensuite fermer et réouvrir SourceTree et/ou la ligne de commande concernée.
