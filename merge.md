@@ -38,14 +38,6 @@ Pour qu'un merge soit nécessaire, l'état de votre répertoire doit rempolir ce
 
 Dans cette situation, votre `master` local sera la `destination`. Évidemment, la branche du serveur `origin/master` sera la `source`.
 
-#### Fast-Forward
-
-```
-Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
-```
-
-Si vous êtes chanceux et que les changements ne sont pas sur les mêmes fichiers, il est possible que git vous propose un fast-forward. C'est un petit raccourci qui fera un commit automatiquement après votre pull.
-
 ## Merge
 
 La plus évidente des sources de `merge` est l'opération qui porte le même nom! Le branche `destination` sera toujours celle qui est ouverte sur votre poste (`checked out`) et la branche `source` est celle que vous choisirez de `merger`. 
