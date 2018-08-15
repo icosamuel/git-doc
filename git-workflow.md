@@ -51,33 +51,13 @@ Your branch is up to date with 'origin/new-blue-character'.
 
 Il est possible que git vous empêche de `checkouter` si les changements nécessaires causeraient des conflits. à ce moment, on vous encourage à `commiter`, `discard` ou `stash` vos changements.
 
-## 2: Pull
-
-<table><tr>
-<td>
-	<img src="img/operations/pull.jpg"/>
-</td>
-<td>
-<pre style="height:100%;" class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git pull</code>
-</pre>
-</td>
-</tr></table>
-
-L'opération `pull` ramène les changements du `répertoire distant` sur votre `répertoire local` ainsi que dans votre `Workspace`. Afin de limiter les erreurs, il est **fortement conseillé** de ne pas avoir de changements locaux (non commités). Afin d'atteindre cet état, vous pouvez utiliser `commit`, `discard` ou `stash` pour vider votre `Staging area`.
-
-### Merge conflicts
-
-Il arrive souvent que l'on est plusieurs à travailler sur les mêmes fichiers et qu'on doit merger les conflits lorsqu'un `pull` les changements su `répertoire distant`. Git va tenter d'effectuer un merge si c'est possible automatiquement, mais parfois il a besoin d'une intervention humaine pour terminer un merge.
-
-Lire plus sur le [Merge](merge).
-
-## 3: Travaillez!
+## 2: Travaillez!
 
 Il n'y a pas de règle concernant la quantité approprié de travail à effectuer pour chaque commit. C'est à vous de trouver un équilibre entre le temps travaillé versus le temps passé à la gestion de vos changements. Typiquement, un programmeur fera un commit pour chaque tache JIRA ou pour un groupe de taches qui sont reliés. 
 
 À noter qu'il n'est pas obligatoire de pusher à chaque commit. Donc pour pouvez par exemple faire 5 commits et faire un push à la fin de l'avant-midi.
 
-## 4: Commit
+## 3: Commit
 
 <table><tr>
 <td>
@@ -137,6 +117,26 @@ Date:   Fri Aug 10 14:36:07 2018 -0400
     votre message +review
 ...
 ```
+
+## 4: Pull
+
+<table><tr>
+<td>
+	<img src="img/operations/pull.jpg"/>
+</td>
+<td>
+<pre style="height:100%;" class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git pull</code>
+</pre>
+</td>
+</tr></table>
+
+L'opération `pull` ramène les changements du `répertoire distant` sur votre `répertoire local` ainsi que dans votre `Workspace`. Afin de limiter les erreurs, il est **fortement conseillé** de ne pas avoir de changements locaux (non commités). Afin d'atteindre cet état, vous pouvez utiliser `commit`, `discard` ou `stash` pour vider votre `Staging area`.
+
+### Merge conflicts
+
+Il arrive souvent que l'on est plusieurs à travailler sur les mêmes fichiers et qu'on doit merger les conflits lorsqu'un `pull` les changements du `répertoire distant`. Git va tenter d'effectuer un merge si c'est possible automatiquement, mais parfois il a besoin d'une intervention humaine pour terminer un merge.
+
+Lire plus sur le [Merge](merge).
 
 ## 5: Push
 
