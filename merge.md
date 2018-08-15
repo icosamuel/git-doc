@@ -52,7 +52,7 @@ La plus évidente des sources de `merge` est l'opération qui porte le même nom
 
 Voici les deux cas d'utilisations:
 
-### Merger `feature/new-fireplace` dans `master`
+#### Merger `feature/new-fireplace` dans `master`
 
 Si on veut <code>merger</code> une branche par exemple <code>feature/new-fireplace</code> dans <code>master</code>, il faut <code>checkout master</code> pour en faire notre <code>destination</code> et ensuite merger notre branche de feature qui sera la <code>source</code>.
 
@@ -67,7 +67,7 @@ $ git merge feature/new-fireplace
 </td>
 </tr></table>
 
-### Merger `master` dans `feature/new-fireplace`
+#### Merger `master` dans `feature/new-fireplace`
 
 Dans le cas ou on veut mettre à jour notre branche <code>feature/new-fireplace</code> avec les nouveautées de <code>master</code>, il faut <code>checkout feature/new-fireplace</code> pour en faire notre <code>destination</code> et ensuite merger le <code>master</code> qui sera la <code>source</code>.
 
@@ -100,7 +100,7 @@ Dans le cas de l'ouverture d'un `stash` sur votre environnement de travail, la v
 
 # Comment?
 
-## Préparation
+### Préparation
 
 Avant d'effectuer l'opération qui peut nécéssiter un merge, c'est toujours une bonne idée de vider sa section `File Status` (l'`index`). On peut le faire avec un `commit`, un `stash`, ou en enlevant nos changements à l'aide de `discard` et `remove`. De cette manière, vous éliminez les chances de mélanger vos changements locaux avec les chagements de la `source`, qui apparaîtront dans l'`index`.
 
@@ -132,7 +132,7 @@ Un message de commit est déjà composé pour vous. Il contiens la mention d'un 
 
 Il arrive parfois que SourceTree ne se mette pas tout de suite à jour et il faut donc le faire soi même avec la touche `F5`. Il peut prendre quelques secondes avant de "comprendre" que git est en mode `merge`, tout dépendamment de la quantité de changements à merger.
 
-### Attention!
+#### Attention!
 
 Il est important de ne pas mélanger vos changements locaux à ceux d'un merge. Le `commit` d'un `merge` ne doit contenir seulement que les changements qui proviennent de la `source`. Vous pouvez simplement les laisser dans la section à ne pas commiter dans fotre `File status`.
 
@@ -148,6 +148,64 @@ En ligne de commande, git le fait déja automatiquement lorsque possible.
 
 ## Résolution de conflits
 
-### Binaires
+Lorsque git ne peut pas faire un `merge` par lui-même et qu'il a besoin d'une intervention humaine, il fait appel à vos skills avec cette étape que l'on nomme `resolve conflicts`.
 
-### Fichiers texte
+<table><tr>
+<td width="370px">
+	<img src="img/merge/merge-conflicts-popup.png"/>
+</td>
+<td style="height:100%;">
+<pre class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git pull
+...
+CONFLICT (content): Merge conflict in Non_Djé.txt
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre>
+</td>
+</tr></table>
+
+À ce moment, vous verrez apparraitre dans votre `index` des fichiers qui ont un icone triangulaire similaire à un panneau d'avertissement.
+
+<table><tr>
+<td width="370px">
+	<img src="img/merge/conflicts-index.png"/>
+</td>
+<td style="height:100%;">
+<pre class="code highlight js-syntax-highlight shell monokai" v-pre="true" lang="shell"><code>$ git status 
+...
+Unmerged paths:
+(use "git add <file>..." to mark resolution)
+    both modified:   "Non_Djé.txt"
+</code></pre>
+</td>
+</tr></table>
+
+#### Binaires
+
+Pour les fichiers qui ne souvrent pas en format texte, vous avez le choix en deux versions. La version de la `source`, ou la version de la `destination`. C'est à ce moment qu'il est important de distinguer la `source` de la `destination`, puisque dans le menu `Resolve Conflicts`, vous aurez les deux options suivantes:
+
+- `Resolve Using 'Mine'` qui va conserver le fichier à l'état de la `destination`
+- `Resolve Using 'Theirs'` qui va conserver le fichier à l'état de la `source`
+
+![](img/merge/conflict-resolve.png)
+
+#### Fichiers texte
+
+Ouvrez votre éditeur de text ou de conflits préféré et effectuez votre merge. Un petit `save`, puis on `stage` le fichier pour continuer avec les autres conflits ou terminer le `commit`.
+
+Dans cet état, le fichier aura des charactères qui sont propres à la résolution de conflits. Si votre éditeur de texte ne les affiche pas de manière personnalisé (avec des options pour les résoudre), vous pouvez facilement distinguer ce qui proviens de la `source` de ce qui est de la `destination`.
+
+```
+<<<<<<< HEAD
+var sectionLocale = {
+    var monChangementLocal = "est super awesome";
+}
+=======
+const sectionDistante = {
+    const onAimeLesConstantes = "parce que ca ne change pas";
+}
+>>>>>>> 7e291be1b344c929c811cda6b0bf8e2d669fd293
+```
+
+Exemple avec VSCode:
+
+![](img/merge/conflict-merge-vscode.png)
