@@ -40,7 +40,7 @@ Dans cette situation, votre `master` local sera la `destination`. Évidemment, l
 
 ## Merge
 
-La plus évidente des sources de `merge` est l'opération qui porte le même nom! Le branche `destination` sera toujours celle qui est ouverte sur votre poste (`checked out`) et la branche `source` est celle que vous choisirez de `merger`. 
+La plus évidente des sources de `merge` est l'opération qui porte le même nom! La branche `destination` sera toujours celle qui est ouverte sur votre poste (`checked out`) et la branche `source` est celle que vous choisirez de `merger`. 
 
 Voici les deux cas d'utilisations:
 
@@ -100,7 +100,7 @@ Cette règle non écrite est une bonne pratique pour toutes les opérations ment
 
 ## Merger
 
-Lorsque vous avez déclenché un merge, votre section `File Status` (l'`index`) sera populé par les changements provenant de la `source`. Qu'il y ait des conflits ou pas, 
+Lorsque vous avez déclenché un merge, votre section `File Status` (l'`index`) sera populée par les changements provenant de la `source`. Qu'il y ait des conflits ou pas, 
 
 Les indices qui vous aide à déterminer si vous êtes dans un merge sont les suivants:
 
@@ -126,7 +126,7 @@ Il arrive parfois que SourceTree ne se mette pas tout de suite à jour et il fau
 
 #### Attention!
 
-Il est important de ne pas mélanger vos changements locaux à ceux d'un merge. Le `commit` d'un `merge` ne doit contenir seulement que les changements qui proviennent de la `source`. Vous pouvez simplement les laisser dans la section à ne pas commiter dans fotre `File status`.
+Il est important de ne pas mélanger vos changements locaux à ceux d'un merge. Le `commit` d'un `merge` ne doit contenir seulement que les changements qui proviennent de la `source`. Vous pouvez simplement les laisser dans la section à ne pas commiter dans votre `File status`.
 
 C'est pour cette raison qu'il est fortement recommandé d'appliquer [cette suggestion sur la préparation](#Préparation).
 
