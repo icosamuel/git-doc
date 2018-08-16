@@ -128,7 +128,7 @@ Il arrive parfois que SourceTree ne se mette pas tout de suite à jour et il fau
 
 Il est important de ne pas mélanger vos changements locaux à ceux d'un merge. Le `commit` d'un `merge` ne doit contenir seulement que les changements qui proviennent de la `source`. Vous pouvez simplement les laisser dans la section à ne pas commiter dans votre `File status`.
 
-C'est pour cette raison qu'il est fortement recommandé d'appliquer [cette suggestion sur la préparation](#Préparation).
+C'est pour cette raison qu'il est fortement recommandé d'appliquer la suggestion faite précédemment dans la section `Préparation`.
 
 ## Merge automatique
 
