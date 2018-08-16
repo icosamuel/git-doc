@@ -132,7 +132,7 @@ C'est pour cette raison qu'il est fortement recommandé d'appliquer [cette sugge
 
 ## Merge automatique
 
-L'outil SourceTree vous permet de faire un commit automatiquement si git ne rencontre pas de conflit et n'as pas besoin de l'intervention humaine. On peut trouver cette option sous la forme d'.une case à cocher dans la fenêtre du `pull`. À ce moment, vous n'aurez qu'à terminer les merge qui contiennent des conflits.
+L'outil SourceTree vous permet de faire un commit automatiquement si git ne rencontre pas de conflit et n'as pas besoin de l'intervention humaine. On peut trouver cette option sous la forme d'une case à cocher dans la fenêtre du `pull`. À ce moment, vous n'aurez qu'à terminer les merge qui contiennent des conflits.
 
 ![](img/merge/commit-merge-automatically.png)
 
