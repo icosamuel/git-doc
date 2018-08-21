@@ -8,6 +8,14 @@ Ce document vous présente une démarche de travail qui s'applique aussi bien au
 
 Les instructions et recommandations dans cet article assument que vous avez lu le dernier article sur [les environments](git-environments). Afin de maximiser la compréhension du sujet exploré, il est fortement conseillé de lire la premiere partie.
 
+### Note
+
+Notez que les termes `surlignés` sont des termes techniques qui reviendront souvent. Ça inclue les `opérations git`, les `environnements` et autres `mots clefs` qui méritent votre attention.
+
+```
+Les boites de textes comme celles-ci contiennent des lignes de commande ou des exemples de code. Si vous utilisez exclusivement SourceTree, vous pouvez les ignorer.
+```
+
 # Workflow d'utilisation des opérations Git
 
 ![](img/workflow/commands-workflow-reworked.png)
@@ -134,7 +142,7 @@ L'opération `pull` ramène les changements du `répertoire distant` sur votre `
 
 ### Merge conflicts
 
-Il arrive souvent que l'on est plusieurs à travailler sur les mêmes fichiers et qu'on doit merger les conflits lorsqu'un `pull` les changements du `répertoire distant`. Git va tenter d'effectuer un merge si c'est possible automatiquement, mais parfois il a besoin d'une intervention humaine pour terminer un merge.
+Il arrive souvent que l'on est plusieurs à travailler sur les mêmes fichiers et qu'on doit merger les conflits lorsqu'on `pull` les changements du `répertoire distant`. Git va tenter d'effectuer un merge si c'est possible automatiquement, mais parfois il a besoin d'une intervention humaine pour terminer un merge.
 
 Lire plus sur le [Merge](merge).
 

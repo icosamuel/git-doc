@@ -8,6 +8,14 @@ Ce document vous présente les différents environnements dans lesquels peuvent 
 
 Les instructions et recommandations dans cet article assument que vous avez un projet de cloné sur votre poste ainsi que l'authentification de base pour communiquer avec le serveur Gitlab. Pour plus d'info, voyez [ce pdf](pdf/sarbakan_sourcetree.pdf)
 
+### Note
+
+Notez que les termes `surlignés` sont des termes techniques qui reviendront souvent. Ça inclue les `opérations git`, les `environnements` et autres `mots clefs` qui méritent votre attention.
+
+```
+Les boites de textes comme celles-ci contiennent des lignes de commande ou des exemples de code. Si vous utilisez exclusivement SourceTree, vous pouvez les ignorer.
+```
+
 # Environements
 
 ![](img/workflow/environments.jpg)

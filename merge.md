@@ -4,6 +4,14 @@
 
 Ce document vous présente les différentes situations ou vous pourriez avoir besoin d'un merge. Les étapes nécessaires y seront détaillées ainsi que plusieurs cas d'utilisation.
 
+### Note
+
+Notez que les termes `surlignés` sont des termes techniques qui reviendront souvent. Ça inclue les `opérations git`, les `environnements` et autres `mots clefs` qui méritent votre attention.
+
+```
+Les boites de textes comme celles-ci contiennent des lignes de commande ou des exemples de code. Si vous utilisez exclusivement SourceTree, vous pouvez les ignorer.
+```
+
 # Merger
 
 Merger des changements est une étape qui arrive régulièrement lorsqu'on travail avec les branches dans un logiciel de versionnage. De plus, le concept de branches est beaucoup plus fondamental dans git, donc il est important d'en avoir une bonne compréhension afin de bien utiliser cet outil de travail.
@@ -16,7 +24,7 @@ Notez qu'en règle générale, nous seront toujours sur la branche `destination`
 
 # Quand?
 
-Merger peu être nécéssaire dans plusieurs scénarios. L'étape du merge peut donc apparraître de différentes manières et l'on doit s'en occuper avant de continuer d'autres opératiuons ou résumer notre travail.
+Merger peu être nécéssaire dans plusieurs scénarios. L'étape du merge peut donc apparraître de différentes manières et l'on doit s'en occuper avant de continuer d'autres opérations ou résumer notre travail.
 
 ## Pull
 
@@ -46,7 +54,7 @@ Voici les deux cas d'utilisations:
 
 #### Merger `feature/new-fireplace` dans `master`
 
-Si on veut <code>merger</code> une branche par exemple <code>feature/new-fireplace</code> dans <code>master</code>, il faut <code>checkout master</code> pour en faire notre <code>destination</code> et ensuite merger notre branche de feature qui sera la <code>source</code>.
+Si on veut <code>merger</code> une branche par exemple <code>feature/new-fireplace</code> dans <code>master</code>, il faut premièrement <code>checkout master</code> pour en faire notre <code>destination</code>, et ensuite merger notre branche de feature qui sera la <code>source</code>.
 
 <table><tr>
 <td width="390px">
@@ -61,7 +69,7 @@ $ git merge feature/new-fireplace
 
 #### Merger `master` dans `feature/new-fireplace`
 
-Dans le cas ou on veut mettre à jour notre branche <code>feature/new-fireplace</code> avec les nouveautées de <code>master</code>, il faut <code>checkout feature/new-fireplace</code> pour en faire notre <code>destination</code> et ensuite merger le <code>master</code> qui sera la <code>source</code>.
+Dans le cas ou on veut mettre à jour notre branche <code>feature/new-fireplace</code> avec les nouveautés de <code>master</code>, il faut d'abord <code>checkout feature/new-fireplace</code>, pour en faire notre <code>destination</code>, et ensuite merger le <code>master</code> qui sera la <code>source</code>.
 
 <table><tr>
 <td width="530px">
@@ -75,6 +83,8 @@ $ git merge master
 </tr></table>
 
 ## Rebase
+
+Si vous voulez utiliser l'opération `rebase`, il est fort possible que vous ayez un `merge` à effectuer. Le `rebase` est un outil de travail pratique, mais il ne sera pas abordé dans cet article.
 
 ## Stash apply
 
@@ -155,7 +165,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 </td>
 </tr></table>
 
-À ce moment, vous verrez apparraitre dans votre `index` des fichiers qui ont un icone triangulaire similaire à un panneau d'avertissement.
+À ce moment, vous verrez apparraitre dans votre `index` des fichiers qui ont un icone triangulaire similaire à un panneau d'avertissement. Il est **impératif** de ne pas `discard` ces changements! Continuez à lire pour voir comment résoudre ces conflits.
 
 <table><tr>
 <td width="370px">
@@ -182,6 +192,8 @@ Pour les fichiers qui ne souvrent pas en format texte, vous avez le choix en deu
 
 #### Fichiers texte
 
+Plus souvent rencontré par les programmeurs, les conflits de fichiers textes sont les plus laborieux, mais les plus intuitifs.
+
 Ouvrez votre éditeur de text ou de conflits préféré et effectuez votre merge. Un petit `save`, puis on `stage` le fichier pour continuer avec les autres conflits ou terminer le `commit`.
 
 Dans cet état, le fichier aura des charactères qui sont propres à la résolution de conflits. Si votre éditeur de texte ne les affiche pas de manière personnalisé (avec des options pour les résoudre), vous pouvez facilement distinguer ce qui proviens de la `source` de ce qui est de la `destination`.
@@ -201,3 +213,5 @@ const sectionDistante = {
 Exemple avec VSCode:
 
 ![](img/merge/conflict-merge-vscode.png)
+
+Si vous désirez intégrer un éditeur de conflits avec SourceTree, on vous suggère `DiffMerge` que vous pouvez mettre en place à l'aide de ce tutoriel: [Using external Diff/Merge in Sourcetree](https://oliverbusse.notesx.net/hp.nsf/tutorial.xsp?documentId=C6A)
