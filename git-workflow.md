@@ -10,7 +10,7 @@ Les instructions et recommandations dans cet article assument que vous avez lu l
 
 ### Note
 
-Notez que les termes `surlignés` sont des termes techniques qui reviendront souvent. Ça inclue les `opérations git`, les `environnements` et autres `mots clefs` qui méritent votre attention.
+Notez que les termes `surlignés` sont des termes techniques qui reviendront souvent. Ça inclue les `opérations git`, les `environnements` et autres `mots clés` qui méritent votre attention.
 
 ```
 Les boites de textes comme celles-ci contiennent des lignes de commande ou des exemples de code. Si vous utilisez exclusivement SourceTree, vous pouvez les ignorer.
