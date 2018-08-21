@@ -88,7 +88,9 @@ Il est possible que SourceTree vous donne des avertissements lors des premières
 Essayez de redémarrer SourceTree, si le problème persiste, [contactez-nous](https://chat.sarbakan.com/channel/R%2526D-connect)!
 
 #### Problèmes d'authentification avec les sous-modules et/ou la ligne de commande
-Ce problème devrait être réglé automatiquement dans le futur (une demande TI a été créé). Pour le régler manuellement, il faut ajouter une variable d'environnement nommée `GIT_SSH` et qui a comme valeur l'emplacement du fichier "plink.exe" de SourceTree, qui est normalement `C:\Program Files (x86)\Atlassian\Sourcetree\tools\putty\plink.exe`
+Ce problème a été réglé automatiquement par les TIs mais nécessite un redémarrage de l'ordinateur (une seule fois). 
+
+Pour le régler manuellement, il faut ajouter une variable d'environnement nommée `GIT_SSH` et qui a comme valeur l'emplacement du fichier "plink.exe" de SourceTree, qui est normalement `C:\Program Files (x86)\Atlassian\Sourcetree\tools\putty\plink.exe`
 
 Pour ce faire, ouvrez une invite de commande en tant qu'administrateur:
 ![cmdAdmin](/uploads/596d5c00fec3f0c43d284c54eee5f6cb/cmdAdmin.png)
