@@ -9,8 +9,6 @@
 
 ## Support
 
-* [HTTP Basic: Access denied](http-access-denied)
-
 * `You are not allowed to push code to this project`  
     * C'est la manière de Gitlab de vous avertir que vous n'avez pas les droits sur le projet. Demandez à votre Lead ou à un prog R&D pour les authorizations.
 
