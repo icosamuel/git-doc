@@ -3,9 +3,9 @@
 ## Documentation
 
 * #### Lecture pour utilisateur intermédiaire
-    * [Détails sur les environments et leurs intéractions](git-environments)
-    * [Workflow d'utilisation des opérations git](git-workflow)
-    * [Bien comprendre le merge et la résolution de conflit](merge)
+    * [Détails sur les environments et leurs intéractions](./git-environments.md)
+    * [Workflow d'utilisation des opérations git](./git-workflow.md)
+    * [Bien comprendre le merge et la résolution de conflit](./merge.md)
 
 ## Support
 
