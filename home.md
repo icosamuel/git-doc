@@ -2,22 +2,10 @@
 
 ## Documentation
 
-* [Utilisation de base de SourceTree et Gitlab](pdf/sarbakan_sourcetree.pdf)
-
 * #### Lecture pour utilisateur intermédiaire
     * [Détails sur les environments et leurs intéractions](git-environments)
     * [Workflow d'utilisation des opérations git](git-workflow)
     * [Bien comprendre le merge et la résolution de conflit](merge)
-
-## Comment Faire?
-
-* [Configurer SourceTree pour utiliser une clée SSH](Configuration-SourceTree-avec-clée-SSH)
-
-* [Afficher le log d'un fichier dans Sourcetree](sourcetree-log-file)
-
-* [Récupérer une ancienne version d'un fichier](sourcetree-reset-to-commit)
-
-* [Changer l'addresse d'un projet git](change-remote-url)
 
 ## Support
 
