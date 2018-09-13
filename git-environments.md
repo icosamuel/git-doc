@@ -122,15 +122,7 @@ On peut repérer les branches distantes à l'aide du mot clef `origin` (qui est 
 </td>
 </tr></table>
 
-Pour qu'on puisse travailler avec le répertoire distant ([Gitlab](https://git.sarbakan.com)), il faut fournir à notre répertoire local un URL. Cet URL est celui que l'on va chercher sur Gitlab et qui sert à faire le `clone`. On doit parfois changer cette adresse comme expliqué dans [cet article](change-remote-url). Cet URL ressemble à quelque chose comme ce qui suit:
-
-```bash
-# protocole HTTPS
-https://git.sarbakan.com/sarbakan/unity/unity-projects/01733_Playmobil_Crystal_Palace_app.git
-
-# protocole SSH
-ssh://git@git.sarbakan.com:10023/sarbakan/unity/unity-projects/01733_Playmobil_Crystal_Palace_app.git
-```
+Pour qu'on puisse travailler avec le répertoire distant ([Gitlab](https://git.sarbakan.com)), il faut fournir à notre répertoire local un URL. Cet URL est celui que l'on va chercher sur Gitlab et qui sert à faire le `clone`. On doit parfois changer cette adresse comme expliqué dans [cet article](change-remote-url).
 
 ## Stash
 
