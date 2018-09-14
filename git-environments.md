@@ -1,4 +1,4 @@
-[Retour](home)
+[Retour](home.md)
 
 ### Sommaire
 
@@ -166,4 +166,4 @@ Maintenant que vous avez une bonne compréhension des divers environnements par 
 
 ![](img/workflow/commands-workflow-reworked.png)
 
-## Pour plus de détails sur les opérations, continuez votre lecture sur le [workflow d'opérations git](git-workflow)
+## Pour plus de détails sur les opérations, continuez votre lecture sur le [workflow d'opérations git](git-workflow.md)
