@@ -1,4 +1,4 @@
-[Retour](home)
+[Retour](git-environments.md)
 
 ### Sommaire
 
@@ -6,7 +6,7 @@ Ce document vous présente une démarche de travail qui s'applique aussi bien au
 
 ### Préalables
 
-Les instructions et recommandations dans cet article assument que vous avez lu le dernier article sur [les environments](git-environments). Afin de maximiser la compréhension du sujet exploré, il est fortement conseillé de lire la premiere partie.
+Les instructions et recommandations dans cet article assument que vous avez lu le dernier article sur [les environments](git-environments.md). Afin de maximiser la compréhension du sujet exploré, il est fortement conseillé de lire la premiere partie.
 
 ### Note
 
@@ -144,7 +144,7 @@ L'opération `pull` ramène les changements du `répertoire distant` sur votre `
 
 Il arrive souvent que l'on est plusieurs à travailler sur les mêmes fichiers et qu'on doit merger les conflits lorsqu'on `pull` les changements du `répertoire distant`. Git va tenter d'effectuer un merge si c'est possible automatiquement, mais parfois il a besoin d'une intervention humaine pour terminer un merge.
 
-Lire plus sur le [Merge](merge).
+Lire plus sur le [Merge](merge.md).
 
 ## 5: Push
 
